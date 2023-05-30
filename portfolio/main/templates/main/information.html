@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href='{% static "css/information/head.css "%}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/information/content.css "%}'>
+<link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
+{% endblock %}
+
+{% block title %}
+Informationn
+{% endblock %}
+
+
+{% block content %}
+<section class="information">
+    <div class="section-information">
+        <div class="content-information">
+            <h1 class="title-information typing-animation">About me</h1>    
+            <span class="about-text">
+                <p>Hey there,</p>
+                <p>My name's Kirill. I'm a programmer focused on graphics, animation, and interaction for web experiences and games.</p>
+                <p>These days I mostly find myself immersed in JavaScript and WebGL for web development</p>
+            </span>       
+        </div>
+        
+        <img class="title-image" src='{% static "images/rudeface.png" %}' alt="">     
+    </div>
+    <div class="content-information">
+        <h2>If you interested, my <a href="{% url 'works' %}">works</a></h2>
+    </div>
+
+
+   
+</section>
+
+{% endblock %}

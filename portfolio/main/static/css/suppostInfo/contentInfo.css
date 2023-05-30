@@ -1,0 +1,43 @@
+.catalogs {
+    margin-top: 25px;
+}
+.catalogs input {
+    margin: 0.4rem;
+}
+
+button[type='reset'] {
+    border: none;
+    width: 125px;
+    background-color: rgb(250, 249, 249);
+    border-radius: 50px;
+    margin-left: 50px;
+    color:black;
+}
+
+.contentCode {
+    background-color: rgb(58, 52, 45); 
+}
+
+.contentCode div {
+    position: relative;
+    background-color: rgb(165, 154, 133);
+    margin-top: 25px;
+}
+
+
+.contentCode div h1 {
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.contentCode div h2 {
+    color: rgb(0, 0, 0);
+    opacity: 20%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.contentCode div code ol {
+    color: red;
+}

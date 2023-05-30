@@ -1,0 +1,88 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+SuppostInfo
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href='{% static "css/suppostInfo/contentInfo.css "%}'>
+<link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
+{% endblock %}
+
+
+{% block content %}
+<h1>Information who Help with Coding ( For me )</h1>
+
+<div class="catalogs">
+    <form>
+        <legend style="color: white;">Select catalogs:</legend>
+    
+        <span>
+            <input class="inputCatalog" onclick="check();" type="radio" name="js" value="Js_content">
+            <label>js</label>
+        </span>
+    
+        <span>
+            <input class="inputCatalog" onclick="check();" type="radio" name="console" value="Console_content">
+            <label>console</label>
+        </span>
+
+        <span>
+            <input class="inputCatalog" onclick="check();" type="radio" name="utility" value="Utility_content">
+            <label>utility</label>
+        </span>
+        <button type="reset">reset filter</button>  
+    </form>
+    
+</div>
+<section class="contentCode">
+    <div class="contentCatalog Js_content">
+        <h1>some Function</h1>
+        <h2>js</h2>
+        <div>
+            <code><font size="2" face="Courier New">
+                <ol>
+                    <li><font color="#006699"><b>function</b></font> <font color="black">isBiggerThan10(element, index, array) {</font></li>
+                    <li>&nbsp;&nbsp;<font color="#006699"><b>return</b></font> <font color="black">element &gt; 10;</font></li>
+                    <li><font color="black">}</font></li><li><font color="black">[2, 5, 8, 1, 4].some(isBiggerThan10);&nbsp; </font><font color="#008200">// false</font></li>
+                    <li><font color="black">[12, 5, 8, 1, 4].some(isBiggerThan10); </font><font color="#008200">// true</font></li>
+                </ol></font>
+            </code>
+        </div>
+    </div>
+
+    <div class="contentCatalog Console_content">
+        <h1>Comands for Django and console</h1>
+        <h2>console</h2>
+        <div>
+            <code>
+                <ol>
+                    <li>django-admin startproject myfirts ## </li>
+                    <li>myfirts&gt;python manage.py runserver ## Start Django</li>
+                    <li>cls ## clear console</li>
+                    <li>python manage.py startapp articles ## make a cotalog</li>
+                    <li>comb ctrl + c</li>
+                </ol>
+            </code>
+        </div>
+    </div>
+
+    <div class="contentCatalog Utility_content">
+        <h1>utility for generate Dump text</h1>
+        <h2>utility</h2>
+        <iframe style="width: 100%; min-height: 400px;" src='{% static "works/genText.html "%}' frameborder="0"></iframe>
+    </div>
+
+    <div class="contentCatalog Utility_content">
+        <h1>cooming some loong</h1>
+        <h2>utility</h2>
+    </div>
+
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src='{% static "js/infoSupport/filter.js" %}'></script>
+{% endblock %}     

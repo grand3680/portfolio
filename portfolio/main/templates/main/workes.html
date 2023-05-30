@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Works
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href='{% static "css/works/content.css "%}'>
+<link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
+{% endblock %}
+
+
+{% block content %}
+<section class="works-section">
+    <h1 class="works-title">Works</h1>
+    <h2 class="works-subtitle">My repositories for Works,<br> some works have links for preview</h2>
+
+    <ul class="works-example"> 
+    {% for item in query_results %}
+        <li><a target="_blank" class="works-links" href="{{ item.0 }}">{{ item.1 }}</a></li>
+    {% endfor %}    
+    </ul>
+</section>
+{% endblock %}
