@@ -9,8 +9,9 @@ on:
 jobs:
   build:
   
-    runs-on: ubuntu-latest
+    runs-on: window
     
     steps:
       - name:  hellow world
-        run : echo "hellow world"
+        run : |
+          dir/s
