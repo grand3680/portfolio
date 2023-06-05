@@ -1,0 +1,51 @@
+.catalogs {
+    margin-top: 25px;
+}
+.catalogs input {
+    margin: 0.4rem;
+}
+
+button[type='reset'] {
+    border: none;
+    width: 125px;
+    background-color: rgb(250, 249, 249);
+    border-radius: 50px;
+    margin-left: 50px;
+    color:black;
+}
+
+
+.contentCode {
+    background-color: rgb(58, 52, 45); 
+}
+
+.contentCode div {
+    position: relative;
+    border-radius: 25px;
+    padding: 10px;
+    
+    background-color: rgb(165, 154, 133, 0.5);
+    margin-top: 25px;
+}
+
+.contentCode div code {
+    background-color: transparent;
+}
+
+
+.contentCode div h1 {
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.contentCode div h2 {
+    color: rgb(20, 20, 20);
+    opacity: 20%;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.contentCode div code ol {
+    color: red;
+}

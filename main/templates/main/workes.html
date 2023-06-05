@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Works{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href='{% static "css/works/content.css "%}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/works/slider.css "%}'>
+<link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+{% endblock %}
+
+
+{% block content %}
+<section class="works-section">
+    <h1 class="works-title">Works</h1>
+    <h2 class="works-subtitle">My repositories for Works (I literally parse the site, so the description matches the Readme file in github </h2>
+
+    <div class="works-example">
+        {% for item in query_results %}
+            <div>
+                <div style="background: url('{{ item.3 }}'); background-repeat: no-repeat;background-size: 100% 100%; "></div>
+                <li>
+                    <a target="_blank" href="{{ item.0 }}">{{ item.1 }}</a>
+                    <h2>{{ item.2.0 }}</h2>
+                    <!-- <a target="_blank" href="{{ item.2.1 }}">link</a> -->
+                </li>
+            </div>
+        {% endfor %}    
+    </div>
+
+</section>
+
+{% endblock %}
+
+{& block scripts &}
+{& endblock &}

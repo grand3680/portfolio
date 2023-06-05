@@ -1,0 +1,86 @@
+
+.works-example {
+    justify-content: center;
+
+    margin-top: 35px;
+    display: flex;
+
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.works-example::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+.works-example::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.works-example::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.works-example > div {
+    text-align: center;
+
+    padding: 10px;
+    margin-top: 10px;
+    width: 40%;
+    min-height: 600px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color: #eee !important;
+    opacity: 90%;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.works-example > div > li{
+    margin-top: 15px;
+    list-style: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .works-example {
+        display: block !important;
+    }
+    .works-example > div {
+        width: 100%;
+    }
+}
+
+
+
+.works-example > div > div {
+    width: 100%;
+    height: 300px;
+}
+
+
+.works-example > div > li a {
+    color: rgb(221, 212, 212);
+    font-size: 50px;
+    text-shadow: -1px 0 #dacece, 0 1px black, 1px 0 black, 0 -1px #dccdcd;
+}
+
+.works-example > div > li > h2 {
+    text-align: start;
+    margin-top: 25px;
+    color: rgb(163, 158, 158);
+    font-size: 30px;
+    text-shadow: -1px 0 #dacece, 0 1px black, 1px 0 black, 0 -1px #dccdcd;
+}
+/* img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>generation of dumb</title>
+	<style>
+	 h2 {
+	  overflow: scroll;
+	  width: 500px;
+	  height: 100px;
+	  background-color: aliceblue;
+	 }
+	 input#inputPlaceLen {
+	  overflow: scroll;
+	  width: 500px;
+	  text-align: start;
+	 }
+	 input, textarea {
+		background-color: aliceblue;
+	 }
+	</style>
+  </head>
+  <body>
+   <h1>Len text</h1>
+   <input id="inputPlace" type="text" name="message" placeholder="write number"/>
+   <button onclick="generationText();">submit</button>
+   <button onclick="Copy()">Copy</button>
+   <h2 id="text"></h2>
+   <br><br><br>
+
+   <input id="inputPlaceLen" type="text" name="message" placeholder="Count words"/>
+   <h3 id="LenLetter"></h3>
+   <h3 id="LenWord"></h3>
+   <h3>Actually count spaces ( if between word 1 space, work Corectrly )</h3>
+   <button onclick="countWord()">countLen</button>   
+   
+   <script>
+   
+   function countWord() {
+    let placeLen = document.getElementById('LenLetter');
+	let placeWord = document.getElementById('LenWord');
+	let inputPlaceLen = document.getElementById('inputPlaceLen').value;
+	placeLen.textContent = "length - " + inputPlaceLen.length;
+    placeWord.textContent= "Words - " + (inputPlaceLen.split(' ').length);
+   }
+   
+   function generationText() {
+	var InputPl = document.getElementById('inputPlace');
+	var txt = document.getElementById('text');	
+	txt.textContent = '';
+	
+	let TextStr = "Antonov Architect Brovka Carrying Cranberries Doughnut Dulze Fig tree Gletcher Infrared Nobleness Poetize Polonism porgey Predefine Rudeness To shout trepidation Wayward Your Boston Brigantine Buryat Glassography Gold-nosed Jumping Langet Midfielder Outhouse Patterned Rewinding Ryan's Shine through Shoot Sopatka Spout Spruce Ticketer To snag Two-dwelling Binoculars Bred Cardiogram Chansonnier Chihir Dominate Floppy Freelance Gelatin Gornji Iceberg In addition It's deal Overproduction Past Reflection Resined Rest Shapoval Valley";	
+	let textArr = TextStr.split(' ');
+	
+	for (let i = 0; i < InputPl.value; i++) {
+	 let word = textArr[Math.floor(Math.random()*textArr.length)]
+	 txt.textContent +=  " " + word;
+	}
+   }
+   
+   function Copy() {
+		let textarea = document.createElement('textarea');
+		textarea.id = 'temp';
+		textarea.style.height = 0;
+		document.body.appendChild(textarea);
+		textarea.value = document.getElementById("text").innerText;
+		let selector = document.querySelector('#temp');
+		selector.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+		alert("text copy");
+   }
+	   
+   
+   </script>
+  </body>
+</html>

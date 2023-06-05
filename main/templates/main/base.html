@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--bootsrap import-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--main css-->
+    <link rel="stylesheet" type="text/css" href='{% static "css/base/body/body.css"%}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/base/body/reset.css"%}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/base/header_nav.css"%}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/base/background/particle_canvas.css"%}'>
+
+    {% block head %}{% endblock %}
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="particle-background">
+        <canvas class="canvas_particle-background"></canvas>
+    </div>
+    <header class="header container">
+        <nav>
+            <span class="header__logo">
+                <h1>.logo</h1>
+            </span>
+            <ul class="header__navigation">
+                <li><a href="{% url 'info' %}">about</a></li>
+                <li><a href="{% url 'works' %}">works</a></li>
+                <li><a href="{% url 'infoSupport' %}">home</a></li>
+                <li><a href="{% url 'infoSupport' %}">info-Support</a></li>
+            </ul>
+            <button class="header__navigation_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}{% endblock %}        
+    </div>
+    <footer>
+        {% block footer %}{% endblock %}        
+    </footer>
+
+    <script src='{% static "js/menu.js" %}'></script>
+    <script type="module" src='{% static "js/background/particle_background.js" %}'></script>
+    {% block scripts %}{% endblock %}        
+</body>
+</html>

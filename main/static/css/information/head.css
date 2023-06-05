@@ -1,0 +1,39 @@
+.information {
+    background-color: rgb(15, 31, 60, 0.5);
+    padding: 15px;
+}
+
+.section-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-information {
+    display: block !important;
+    font-size: 25px;    
+}
+
+.title-information::after {
+    content: ":";
+    color: rgb(238, 229, 229);
+    font-size: 25px;    
+    margin-left: 25px;
+}
+
+.title-image {
+    display: block !important;
+    width: 300px;
+    height: 350px;
+}
+
+@media screen and (max-width: 700px) {
+    .section-information {
+        display: block;
+    }
+
+    .title-image {
+        display: flex !important;
+        text-align: start;
+        margin-top: 10px;
+    }
+}

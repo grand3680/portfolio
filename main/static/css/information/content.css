@@ -1,0 +1,46 @@
+.content-information {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.about-text {
+    font-size: 20px;
+}
+
+.about-text p{
+    margin-top: 15px;
+}
+
+.about-text p:nth-child(1) {
+    margin-top: 20px;
+}
+
+
+.typing-animation {
+    overflow: hidden;
+    width: 100%;
+    letter-spacing: 2.5px;
+    border-right: .1em solid rgb(77, 73, 66);
+
+    word-wrap: break-word;
+    animation: 
+        typing 3.5s steps(50, end),
+        blinking 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        white-space: nowrap;
+        width: 0%;
+    }
+
+    to {
+        word-wrap:normal;
+        width: 100%;     
+    }
+}
+
+@keyframes blinking {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(77, 73, 66); }
+}
