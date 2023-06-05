@@ -47,5 +47,15 @@ button[type='reset'] {
 }
 
 .contentCode div code ol {
-    color: red;
+    color: rgb(240, 240, 240);
+}
+
+.imgContent {
+    max-width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+    .imgContent {
+        display: block !important;
+    }
 }
