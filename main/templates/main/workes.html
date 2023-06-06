@@ -6,7 +6,7 @@
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href='{% static "css/works/content.css "%}'>
-<link rel="stylesheet" type="text/css" href='{% static "css/works/slider.css "%}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/works/workExample.css "%}'>
 <link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 {% endblock %}
@@ -19,7 +19,7 @@
 
     <div class="works-example">
         {% for item in query_results %}
-            <div>
+            <div class="element-animation">
                 <div style="background: url('{{ item.3 }}'); background-repeat: no-repeat;background-size: 100% 100%; "></div>
                 <li>
                     <a target="_blank" href="{{ item.0 }}">{{ item.1 }}</a>
@@ -28,10 +28,11 @@
             </div>
         {% endfor %}    
     </div>
-
 </section>
 
 {% endblock %}
 
-{& block scripts &}
-{& endblock &}
+
+{% block scripts %}
+<script src='{% static "js/workes/animateBlock.js" %}'></script>
+{% endblock %}    

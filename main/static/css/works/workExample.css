@@ -24,6 +24,17 @@
 }
 
 
+.element-animation {
+    opacity: 0;
+    top: 100px;
+}
+.element-animation.element-show {
+    opacity: 90% !important;
+    top: 0px;
+    transition: all 1.5s;
+}
+
+
 .works-example > div {
     text-align: center;
 
@@ -34,7 +45,6 @@
     margin-right: 50px;
     border-radius: 10px;
     background-color: #eee !important;
-    opacity: 90%;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
