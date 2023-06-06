@@ -1,1 +1,5 @@
 /main/static/secretKey.txt
+__pycache__/
+*.pyc
+.python-version
+.vscode/*
