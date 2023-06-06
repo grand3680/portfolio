@@ -1,5 +1,5 @@
 from django.test import TestCase
 
 
-class print(TestCase):
+class printMess(TestCase):
     print("aaaaaaaaaallllllll goooooooood")
