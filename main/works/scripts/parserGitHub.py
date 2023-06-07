@@ -1,17 +1,28 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from ..models import *
 
 def parseGitHub():
     response = requests.get('https://github.com/grand3680?tab=repositories')
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    links = []
+    repos = repositories.objects.all()
+
 
     # parsing site ( My gitHub ) around 20 repositirios now
     for link in soup.find(id="user-repositories-list").find_all('a'):
         href = link.get('href')
         linkHref = "https://github.com" + href
+
+        point_break = False
+        for repos in repositories.objects.all():
+            if (href[11::] == repos.name):
+                point_break = True
+                break
+        
+        if point_break == True:
+            continue
 
         responseReadme = requests.get(str(linkHref))
         soupReadme = BeautifulSoup(responseReadme.text, 'html.parser').find(id="readme")
@@ -37,6 +48,7 @@ def parseGitHub():
         except:
             print("error img")
 
-        links.append([linkHref, href[11::], [txt, findLink], img])
-    
-    return links
+        # links.append([linkHref, href[11::], [txt, findLink], img])
+
+        repo = repositories(name=f'{href[11::]}', content=f'{txt}', images=f'{img}')
+        repo.save()

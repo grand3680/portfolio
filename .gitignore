@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .python-version
 .vscode/*
+/main/db.sqlite3

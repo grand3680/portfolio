@@ -20,10 +20,10 @@
     <div class="works-example">
         {% for item in query_results %}
             <div class="element-animation">
-                <div style="background: url('{{ item.3 }}'); background-repeat: no-repeat;background-size: 100% 100%; "></div>
+                <div style="background: url('{{ item.images }}'); background-repeat: no-repeat;background-size: 100% 100%; "></div>
                 <li>
-                    <a target="_blank" href="{{ item.0 }}">{{ item.1 }}</a>
-                    <h2>{{ item.2.0 }}</h2>
+                    <a target="_blank" href="https://github.com/grand3680/{{ item.name }}">{{ item.name }}</a>
+                    <h2>{{ item.content }}</h2>
                 </li>
             </div>
         {% endfor %}    
@@ -31,6 +31,7 @@
 </section>
 
 {% endblock %}
+
 
 
 {% block scripts %}
