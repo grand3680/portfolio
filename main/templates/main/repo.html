@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title %}
+{{ repositories.name }}
+{% endblock %}
+
+
+{% block content %}
+<h1>{{ repositories.name }}</h1>
+<br><br>
+
+{% if repositories.content %}
+    <h2>{{ repositories.content }}</h2>
+{% endif %}
+
+<img src="{{ repositories.images }}" alt="">
+
+{% endblock %}

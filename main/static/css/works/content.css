@@ -9,6 +9,14 @@
     }
 }
 
+.read-repo {
+    font-size: 15px;
+    position: absolute !important;
+    bottom: 25px;
+    right: 15px;
+
+}
+
 .works-title {
     font-size: 50px;
 }
