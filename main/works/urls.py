@@ -6,5 +6,5 @@ from django.views.generic import DetailView
 
 urlpatterns = [
     path('', views.index, name='works'),
-    path('<int:pk>/',DetailView.as_view(model=repositories, template_name='main/repo.html'))
+    path('repo-<int:pk>/',DetailView.as_view(model=repositories, template_name='main/repo.html'))
 ]

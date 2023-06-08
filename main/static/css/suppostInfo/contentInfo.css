@@ -50,9 +50,6 @@ button[type='reset'] {
     color: rgb(240, 240, 240);
 }
 
-.imgContent {
-    max-width: 500px;
-}
 
 @media screen and (max-width: 1000px) {
     .imgContent {

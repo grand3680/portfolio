@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href='{% static "css/works/content.css "%}'>
 <link rel="stylesheet" type="text/css" href='{% static "css/works/workExample.css "%}'>
 <link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 {% endblock %}
 
 
@@ -24,7 +23,7 @@
                 <li>
                     <a target="_blank" href="https://github.com/grand3680/{{ item.name }}">{{ item.name }}</a>
                     <h2>{{ item.content }}</h2>
-                    <a class="read-repo" href="{{ item.id }}">read</a>
+                    <a class="read-repo" href="repo-{{ item.id }}">read</a>
                 </li>
             </div>
         {% endfor %}    

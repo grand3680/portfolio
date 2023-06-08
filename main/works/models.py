@@ -4,8 +4,8 @@ from django.urls import reverse
 # my repositories
 class repositories(models.Model):
     name = models.CharField(max_length=255, verbose_name="title", null=True)
-    content = models.TextField(max_length=255, verbose_name="content", null=True)
-    images = models.TextField(max_length=255, verbose_name="images", null=True)
+    content = models.TextField(verbose_name="content", null=True)
+    images = models.TextField(verbose_name="images", null=True)
 
 
     def __str__(self):

@@ -2,19 +2,31 @@
 {% load static %}
 
 
+
+{% block head %}
+<link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
+<link rel="stylesheet" type="text/css" href='{% static "css/works/repos.css"%}'>
+
+{% endblock %}
+
+
 {% block title %}
 {{ repositories.name }}
 {% endblock %}
 
 
 {% block content %}
-<h1>{{ repositories.name }}</h1>
-<br><br>
+<div class="card mt-2 mx-auto" style="width: 80%;">
+    <img class="card-img-top p-3 rounded" src="{{ repositories.images }}"  alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title text-dark">{{ repositories.name }}</h5>
+        {% if repositories.content %}
+            <p class="card-text text-secondary">{{ repositories.content }}</p>
+        {% endif %}
+    <a href="/works/" class="btn btn-dark mt-3">Go back</a>
+    </div>
+</div>
 
-{% if repositories.content %}
-    <h2>{{ repositories.content }}</h2>
-{% endif %}
-
-<img src="{{ repositories.images }}" alt="">
+<!-- <img src="{{ repositories.images }}" alt=""> -->
 
 {% endblock %}

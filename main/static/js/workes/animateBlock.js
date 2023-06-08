@@ -9,5 +9,6 @@ let options = { threshold: [0.7] };
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.element-animation');
 for (let elm of elements) {
+    elm.classList.add("opZero");
     observer.observe(elm);
 }

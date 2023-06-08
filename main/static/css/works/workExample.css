@@ -23,15 +23,18 @@
     background: transparent;
 }
 
+.opZero {
+    opacity: 0%;
+}
 
 .element-animation {
-    opacity: 0;
     top: 100px;
 }
+
 .element-animation.element-show {
+    transition: top 1s, opacity 1.5s;    
     opacity: 90% !important;
     top: 0px;
-    transition: all 1.5s;
 }
 
 
