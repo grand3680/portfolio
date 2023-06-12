@@ -7,6 +7,7 @@ SuppostInfo
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href='{% static "css/suppostInfo/contentInfo.css "%}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/suppostInfo/check_box.css "%}'>
 <link rel="icon" href='{% static "images/ava.png"%}' type="image/x-icon">
 {% endblock %}
 
@@ -19,18 +20,27 @@ SuppostInfo
         <legend style="color: white;">Select catalogs:</legend>
     
         <span>
-            <input class="inputCatalog" onclick="check();" type="radio" name="js" value="Js_content">
-            <label>js</label>
+            <label>
+                <input class="inputCatalog" onclick="check();" type="checkbox" checked name="js" value="Js_content">
+                <span class="inputBox"></span>
+                js
+            </label>
         </span>
     
         <span>
-            <input class="inputCatalog" onclick="check();" type="radio" name="console" value="Console_content">
-            <label>console</label>
+            <label>
+                <input class="inputCatalog" onclick="check();" type="checkbox" checked name="console" value="Console_content">
+                <span class="inputBox"></span>
+                console
+            </label>
         </span>
 
         <span>
-            <input class="inputCatalog" onclick="check();" type="radio" name="utility" value="Utility_content">
-            <label>utility</label>
+            <label>
+                <input class="inputCatalog" onclick="check();" type="checkbox" checked name="utility" value="Utility_content">
+                <span class="inputBox"></span>
+                utility
+            </label>
         </span>
         <button type="reset">reset filter</button>  
     </form>
@@ -44,10 +54,10 @@ SuppostInfo
             <code>
                 <font size="2" face="Courier New">
                     <ol>
-                        <li><font color="#006699"><b>function</b></font> <font color="black">isBiggerThan10(element, index, array) {</font></li>
-                        <li>&nbsp;&nbsp;<font color="#006699"><b>return</b></font> <font color="black">element &gt; 10;</font></li>
-                        <li><font color="black">}</font></li><li><font color="black">[2, 5, 8, 1, 4].some(isBiggerThan10);&nbsp; </font><font color="#008200">// false</font></li>
-                        <li><font color="black">[12, 5, 8, 1, 4].some(isBiggerThan10); </font><font color="#008200">// true</font></li>
+                        <li><font color="#006699"><b>function</b></font> <font color="white">isBiggerThan10(element, index, array) {</font></li>
+                        <li>&nbsp;&nbsp;<font color="#006699"><b>return</b></font> <font color="white">element &gt; 10;</font></li>
+                        <li><font color="white">}</font></li><li><font color="white">[2, 5, 8, 1, 4].some(isBiggerThan10);&nbsp; </font><font color="#008200">// false</font></li>
+                        <li><font color="white">[12, 5, 8, 1, 4].some(isBiggerThan10); </font><font color="#008200">// true</font></li>
                     </ol>
                 </font>
             </code>

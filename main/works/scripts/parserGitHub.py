@@ -21,7 +21,7 @@ def parseGitHub():
                 point_break = True
                 break
         
-        if point_break == True:
+        if point_break:
             continue
 
         responseReadme = requests.get(str(linkHref))
@@ -47,8 +47,6 @@ def parseGitHub():
             img = soupReadme.find("img").get('src')
         except:
             print("error img")
-
-        # links.append([linkHref, href[11::], [txt, findLink], img])
 
         repo = repositories(name=f'{href[11::]}', content=f'{txt}', images=f'{img}')
         repo.save()

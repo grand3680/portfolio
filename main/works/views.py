@@ -5,7 +5,6 @@ from .scripts.parserGitHub import parseGitHub
 
 from .models import *
 
-muCont = repositories.objects.all()
 
 parseGitHub()
 

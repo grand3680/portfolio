@@ -1,8 +1,15 @@
 .catalogs {
     margin-top: 25px;
 }
-.catalogs input {
+
+.catalogs span{
+    cursor: pointer;
+}
+
+.catalogs label {
     margin: 0.4rem;
+    padding-left: 1.2em;
+    cursor: pointer;
 }
 
 button[type='reset'] {
@@ -55,4 +62,8 @@ button[type='reset'] {
     .imgContent {
         display: block !important;
     }
+}
+
+.hidden {
+    display: none !important;
 }

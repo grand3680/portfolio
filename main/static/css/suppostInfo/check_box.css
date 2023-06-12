@@ -1,0 +1,41 @@
+.inputCatalog {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.inputBox {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.2em;
+    margin-top: 0.4em;
+    background-image: url(/static/images/check_box/off.svg);
+}
+
+
+
+/* Checked */
+.inputCatalog:checked + .inputBox {
+    background-image: url(/static/images/check_box/on.svg);
+}
+
+/* Focused */
+.inputCatalog:focus + .inputBox {
+    background-image: url(/static/images/check_box/off-focused.svg);
+}
+
+.inputCatalog:checked:focus + .inputBox {
+    background-image: url(/static/images/check_box/on-focused.svg);
+}
+
+/* Disabled */
+.inputCatalog:disabled + .inputBox {
+    background-image: url(/static/images/check_box/off-disabled.svg);
+}
+
+.inputCatalog:checked:disabled + .inputBox {
+    background-image: url(/static/images/check_box/on-disabled.svg);
+}
