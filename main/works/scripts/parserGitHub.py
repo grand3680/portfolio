@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 import re
 from ..models import *
 
+import time
+
+start_time = time.time()
+
 def parseGitHub():
     response = requests.get('https://github.com/grand3680?tab=repositories')
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -50,3 +54,6 @@ def parseGitHub():
 
         repo = repositories(name=f'{href[11::]}', content=f'{txt}', images=f'{img}')
         repo.save()
+
+    finish_time = time.time() - start_time
+    print(f"time: {finish_time}")

@@ -50,7 +50,6 @@
                 </button>
             </nav>
         </header>
-
         {% block content %}{% endblock %}        
     </div>
     <footer>
@@ -58,8 +57,9 @@
     </footer>
 
     <script src='{% static "js/menu.js" %}'></script>
-    <script type="module" src='{% static "js/background/particle_background.js" %}'></script>
-    
+    <script src='{% static "js/background/particle_config.js" %}'></script>
+    <script src='{% static "js/background/particle_background.js" %}'></script>
+
     {% block scripts %}{% endblock %}        
 </body>
 </html>

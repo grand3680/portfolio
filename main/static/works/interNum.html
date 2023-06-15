@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posible</title>
+    <style>
+        button {
+            color: black;
+            width: 75px;
+            cursor: pointer;
+        }
+
+        p, h1, h2, label {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>formula for count boxex</h1>
+    <p>N! / K!(N-K)!</p>
+
+    <label style="cursor: pointer;">
+        count boxex - 
+        <input id="countBox" type="text">
+        <button onclick="ShowIter();">submit</button>   
+    </label>
+
+    <section id="section_iter">
+        <h1 style="font-size: 25px;" id="result_iter"></h1>
+        <h2 style="font-size: 15px;">someThing like that ↓ ( but is show only number now a Variation )</h2>
+        <img width="340px" height="240px" src="../images/combinations.png" alt="">
+    </section>
+
+    <script src="./JsWorks/CountIter.js"></script>
+</body>
+</html>

@@ -2,19 +2,16 @@ const canvas = document.querySelector(".canvas_particle-background");
 var ctx = canvas.getContext("2d");
 var arrPoint = [];
 
-var configJson = {
-    "name": "particle_canvas",
-    "size": 1.5,
-    "max_velocity": 0.75,
-    "count": 150,     
-    "touchLength": 125,
-    "colors": [
-        "#DFDFDD",
-        "#2B3128",
-        "#F8F3E7"
-    ],
-    "strokeColor": "150, 150, 50"
-}
+function include(file) { 
+    var script  = document.createElement('script'); 
+    script.src  = file; 
+    script.type = 'text/javascript'; 
+    script.defer = true; 
+    
+    document.getElementsByTagName('head').item(0).appendChild(script); 
+} 
+include('/static/js/background/particle_config.js');
+
 
 // get random int from randing from -max to max
 function getRandomVelocity(max) {
@@ -101,19 +98,5 @@ function update() {
     particleMove(arrPoint);   
     window.requestAnimationFrame(update);  
 }
-
-
-// window.addEventListener("click", (e) => {
-//     let x = e.offsetX;
-//     let y = e.offsetY;
-//     let cords = [x, y];
-
-//     let randomColor = configJson.colors[Math.floor(Math.random() * configJson.colors.length)];
-//     let velocityX = getRandomVelocity(configJson.max_velocity);
-//     let velocityY = getRandomVelocity(configJson.max_velocity);
-
-//     arrPoint.push([cords[0], cords[1], randomColor, velocityX, velocityY, configJson.size]);
-
-// }); 
 
 makeCanvas();
