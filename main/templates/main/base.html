@@ -24,6 +24,17 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
+    <!-- include js files into other js files -->
+    <script type="text/javascript">
+        function include(file) { 
+            var script  = document.createElement('script'); 
+            script.src  = file; 
+            script.type = 'text/javascript'; 
+            script.defer = true; 
+            
+            document.getElementsByTagName('head').item(0).appendChild(script); 
+        } 
+    </script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body style='overflow-x:hidden;'>
@@ -35,12 +46,13 @@
         <header class="header">
             <nav>
                 <span class="header__logo">
-                    <h1>.logo</h1>
+                    <a href="{% url 'home' %}"> <!-- home page -->
+                        <h1>.logo</h1>
+                    </a>
                 </span>
                 <ul class="header__navigation">
                     <li><a href="{% url 'info' %}">about</a></li>
                     <li><a href="{% url 'works' %}">works</a></li>
-                    <li><a href="{% url 'infoSupport' %}">home</a></li>
                     <li><a href="{% url 'infoSupport' %}">info-Support</a></li>
                 </ul>
                 <button class="header__navigation_menu">
@@ -58,6 +70,7 @@
 
     <script src='{% static "js/menu.js" %}'></script>
     <script src='{% static "js/background/particle_config.js" %}'></script>
+    <script src='{% static "js/background/particle_funsction.js" %}'></script>
     <script src='{% static "js/background/particle_background.js" %}'></script>
 
     {% block scripts %}{% endblock %}        

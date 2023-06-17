@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href='{% static "css/homePage/content.css "%}'>
+{% endblock %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+
+{% block content %}
+<section class="HomePage">
+    <div class="HomePage-info">
+        <div class="HomePage-info_content">
+            <h1 class="title-content">Hello! I'm a <span style="color: rgb(243, 237, 200);">programmer</span></h1>      
+            <h2 class="Subtitle-content">And I think I need to surprise, right ?)</h2>
+            <p class="text-content">but maybe Tomorrow ;3 And actually I like a process on proggraming and so love that</p>
+        </div>
+    </div>
+</section>
+
+{% block scripts %}
+<script src='{% static "js/background/particle_worlds.js" %}'></script>
+{% endblock %}      
+
+{% endblock %}

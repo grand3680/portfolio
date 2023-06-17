@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'information',
     'works',
     'supportInfo',
+    'homePage',
 
     # 'works.apps.WorksConfig', 
     'django.contrib.admin',

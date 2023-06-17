@@ -11,4 +11,5 @@ urlpatterns = [
     path('information/', include('information.urls')),
 	path('works/', include('works.urls')),
     path('suppostInfo/', include('supportInfo.urls')),
+    path('homePage/', include('homePage.urls')),
 ]

@@ -12,6 +12,16 @@
             cursor: pointer;
         }
 
+        .formula {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+        }
+
         p, h1, h2, label {
             color: white;
         }
@@ -19,7 +29,15 @@
 </head>
 <body>
     <h1>formula for count boxex</h1>
-    <p>N! / K!(N-K)!</p>
+    
+    <math class="formula" display="inline">
+        <mfrac>
+          <msup>
+            <mi>n!</mi>
+          </msup>
+          <mn>k!(n-k)!</mn>
+        </mfrac>
+    </math>
 
     <label style="cursor: pointer;">
         count boxex - 
