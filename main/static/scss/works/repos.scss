@@ -1,0 +1,27 @@
+div { 
+    img {
+        height: 500px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .p-3 {
+        padding: 0 !important;
+    }    
+
+    div {
+        img {
+            height: 350px;
+        }   
+    } 
+
+    .card {
+        width: 99% !important;
+        font-size: 25px;
+    }
+
+    .card-title {
+        font-size: 35px;
+    }
+}

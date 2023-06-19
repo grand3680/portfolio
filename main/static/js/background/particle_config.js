@@ -1,8 +1,8 @@
 var configJson = {
     "name": "particle_canvas",
-    "size": 1.5,
+    "size": 2.5,
     "max_velocity": 0.75,
-    "count": 150,     
+    "count": 250,     
     "touchLength": 125,
     "colors": [
         "#DFDFDD",

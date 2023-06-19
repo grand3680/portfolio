@@ -1,6 +1,9 @@
 /main/static/secretKey.txt
+/main/static/prepros.config
+*__pycache__/
 __pycache__/
 *.pyc
 .python-version
 .vscode/*
 /main/db.sqlite3
+*.map

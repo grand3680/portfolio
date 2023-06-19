@@ -2,6 +2,9 @@ var canvas = document.querySelector(".canvas_particle-background");
 var ctx = canvas.getContext("2d");
 var arrPoint = [];
 
+canvas.width = window.innerWidth; 
+canvas.height = window.innerHeight;  
+if ( canvas.width <= 800) canvas.width = 800, canvas.height = 1000;
 
 include('/static/js/background/particle_config.js');
 include('/static/js/background/particle_funsction.js');
@@ -30,7 +33,6 @@ function makeCanvas() {
         let velocityY = getRandomVelocity(configJson.max_velocity);
         arrPoint.push([cords[0], cords[1], randomColor, velocityX, velocityY, configJson.size]);
     } 
-    update();
 }
 
 var reqId;
@@ -41,3 +43,4 @@ function update() {
 }
 
 makeCanvas();
+update();

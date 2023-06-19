@@ -7,8 +7,7 @@ function getRandomVelocity(max) {
 
 // get random int from randing
 function getRandomCords() {
-    canvas.width = 1200;    
-    canvas.height = 1200 - 400;  
+
 
     let cordX = Math.floor(Math.random() * canvas.width );
     let cordY = Math.floor(Math.random() * canvas.height);

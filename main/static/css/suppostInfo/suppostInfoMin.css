@@ -1,0 +1,124 @@
+.inputCatalog {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.inputBox {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin-left: -1.2em;
+  margin-top: 0.4em;
+  background-image: url(/static/images/check_box/off.svg);
+}
+
+/* Checked */
+.inputCatalog:checked + .inputBox {
+  background-image: url(/static/images/check_box/on.svg);
+}
+
+/* Focused */
+.inputCatalog:focus + .inputBox {
+  background-image: url(/static/images/check_box/off-focused.svg);
+}
+
+.inputCatalog:checked:focus + .inputBox {
+  background-image: url(/static/images/check_box/on-focused.svg);
+}
+
+/* Disabled */
+.inputCatalog:disabled + .inputBox {
+  background-image: url(/static/images/check_box/off-disabled.svg);
+}
+
+.inputCatalog:checked:disabled + .inputBox {
+  background-image: url(/static/images/check_box/on-disabled.svg);
+}
+
+.catalogs {
+  margin-top: 25px;
+}
+
+.contentCatalog {
+  min-height: 200px !important;
+  max-height: 1000px !important;
+}
+
+.contentCatalog_iframe {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.contentCatalog_iframe iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100% !important;
+  width: 100% !important;
+  border: 0;
+}
+
+.catalogs span {
+  cursor: pointer;
+}
+
+.catalogs label {
+  margin: 0.4rem;
+  padding-left: 1.2em;
+  cursor: pointer;
+}
+
+button[type=reset] {
+  border: none;
+  width: 125px;
+  background-color: rgb(250, 249, 249);
+  border-radius: 50px;
+  margin-left: 50px;
+  color: black;
+}
+
+.contentCode {
+  background-color: rgb(58, 52, 45);
+}
+
+.contentCode div {
+  position: relative;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: rgba(165, 154, 133, 0.5);
+  margin-top: 25px;
+}
+
+.contentCode div code {
+  background-color: transparent;
+}
+
+.contentCode div h1 {
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+
+.contentCode div h2 {
+  color: rgb(20, 20, 20);
+  opacity: 20%;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.contentCode div code ol {
+  color: rgb(240, 240, 240);
+}
+
+@media screen and (max-width: 1000px) {
+  .imgContent {
+    display: block !important;
+  }
+}
+.hidden {
+  display: none !important;
+}
