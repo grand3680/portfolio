@@ -1,4 +1,3 @@
-
 .works-example {
     justify-content: center;
 
@@ -7,20 +6,6 @@
 
     word-wrap: break-word;
     flex-wrap: wrap;
-}
-
-.works-example::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-}
-
-.works-example::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
-}
-
-.works-example::-webkit-scrollbar-track {
-    background: transparent;
 }
 
 .opZero {

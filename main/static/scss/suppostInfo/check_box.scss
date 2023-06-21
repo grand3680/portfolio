@@ -1,0 +1,44 @@
+$baseSrc: "/static/images/check_box/"; 
+
+@mixin bk-image($name, $src : $baseSrc) {
+    background-image: url($src + $name);
+}
+
+.inputBox {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.2em;
+    margin-top: 0.4em;
+    @include bk-image('off.svg');
+}
+
+
+.inputCatalog {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    
+    &:checked + .inputBox {
+        @include bk-image('on.svg');
+    }
+    
+    &:focus + .inputBox {
+        @include bk-image('off-focused.svg');        
+    }
+    
+    &:checked:focus + .inputBox {
+        @include bk-image('on-focused.svg');
+    }
+    
+    &:disabled + .inputBox {
+        @include bk-image('off-disabled.svg'); 
+    }
+    
+    &:checked:disabled + .inputBox {
+        @include bk-image('on-disabled.svg');
+    }
+}
+

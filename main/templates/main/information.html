@@ -21,7 +21,7 @@ Informationn
 <section class="information">
     <div class="section-information">
         <div class="content-information">
-            <h1 class="title-information typing-animation">About me</h1>    
+            <h1 class="title-information">About me</h1>    
             <span class="about-text">
                 <p>Hey there,</p>
                 <p>My name's Kirill. I'm a programmer focused on graphics, animation, and interaction for web experiences and games.</p>
@@ -33,10 +33,33 @@ Informationn
     </div>
     <div class="content-information">
         <h2>If you interested, my <a href="{% url 'works' %}">works</a></h2>
-    </div>
-
+    </div>  
 
    
 </section>
 
 {% endblock %}
+
+
+{% block scripts %}
+<script src='{% static "js/aboutInfo/typing.js" %}'></script>
+<script>
+    var typingText = new typingTxt (
+        selectEl = ".title-information",
+        {
+            textContent : [
+                'hey',
+                'I"m proggrammer',
+                'I know - ',
+                'HTML',
+                'JS',
+                'SCSS and SASS  ❤️ ( I used on this project )'
+            ],
+            id : 1,
+            delay : 225,
+        }
+
+    );
+</script>
+
+{% endblock %}     

@@ -11,14 +11,10 @@
 .title-information {
     display: block !important;
     font-size: 25px;    
+    min-width: 100px;
+    min-height: 35px;
 }
 
-.title-information::after {
-    content: ":";
-    color: rgb(238, 229, 229);
-    font-size: 25px;    
-    margin-left: 25px;
-}
 
 .title-image {
     display: block !important;

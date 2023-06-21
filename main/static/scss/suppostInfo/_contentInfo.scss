@@ -1,7 +1,3 @@
-.catalogs {
-    margin-top: 25px;
-}
-
 .contentCatalog {
     min-height: 200px !important; 
     max-height: 1000px !important; 
@@ -11,25 +7,29 @@
     position: relative;
     width: 100%;
     height: 500px;
+
+    iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100% !important; 
+        width: 100% !important;
+        border: 0;        
+    }
 }
 
-.contentCatalog_iframe iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100% !important; 
-    width: 100% !important;
-    border: 0;
-}
 
-.catalogs span{
-    cursor: pointer;
-}
+.catalogs {
+    margin-top: 25px;
+    span {
+        cursor: pointer;
+    }
 
-.catalogs label {
-    margin: 0.4rem;
-    padding-left: 1.2em;
-    cursor: pointer;
+    label {
+        margin: 0.4rem;
+        padding-left: 1.2em;
+        cursor: pointer;
+    }    
 }
 
 button[type='reset'] {
@@ -44,37 +44,35 @@ button[type='reset'] {
 
 .contentCode {
     background-color: rgb(58, 52, 45); 
-}
 
-.contentCode div {
-    position: relative;
-    border-radius: 25px;
-    padding: 10px;
-    
-    background-color: rgb(165, 154, 133, 0.5);
-    margin-top: 25px;
-}
+    div {
+        position: relative;
+        border-radius: 25px;
+        padding: 10px;
+        
+        background-color: rgb(165, 154, 133, 0.5);
+        margin-top: 25px;
+        h1 {
+            color: rgb(255, 255, 255);
+            margin-left: 10px;
+        }
 
-.contentCode div code {
-    background-color: transparent;
-}
+        h2 {
+            color: rgb(20, 20, 20);
+            opacity: 20%;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+        }
 
-
-.contentCode div h1 {
-    color: rgb(255, 255, 255);
-    margin-left: 10px;
-}
-
-.contentCode div h2 {
-    color: rgb(20, 20, 20);
-    opacity: 20%;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-}
-
-.contentCode div code ol {
-    color: rgb(240, 240, 240);
+        code {
+            background-color: transparent;
+            ol {
+                color: rgb(240, 240, 240);
+            }            
+        }
+        
+    }    
 }
 
 
