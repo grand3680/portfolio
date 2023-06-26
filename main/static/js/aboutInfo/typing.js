@@ -10,16 +10,17 @@ class typingTxt {
     this.indexWord = 0;
 
     
-    this.curentId = this.beingInto("id", this.options);
-    this.delay = this.beingInto("delay", this.options);
+    this.curentId = this.beingInto("id", this.options, 1);
+    this.delay = this.beingInto("delay", this.options, 100);
+    this.backDelay = this.beingInto("backDelay", this.options, this.delay);
 
     if (this.curentId != null) {
       this.typingAnimate();
     }
   }
 
-  beingInto(name, option) {
-    return typeof option[`${name}`] !== "undefined" ? option[`${name}`] : null;
+  beingInto(name, option, standartValue = null) {
+    return typeof option[`${name}`] !== "undefined" ? option[`${name}`] : standartValue;
   }
 
   typingAnimate() {
@@ -27,7 +28,7 @@ class typingTxt {
 
     setTimeout(() => {
       this.typingAnimate()
-    }, this.delay);
+    }, (this.backAnimate ? this.backDelay : this.delay));
   }
 
   activeWord() {
@@ -50,14 +51,16 @@ class typingTxt {
       this.backAnimate = true;
     }
 
-    if (this.backAnimate) {
-      this.indexLetter -= 1;
-      this.animateTxt();
-    }
+    switch (this.backAnimate) {
+      case true:
+        this.indexLetter -= 1;
+        this.animateTxt();
+        break;
 
-    if (!this.backAnimate) {
-      this.animateTxt();
-      this.indexLetter += 1;
+      case false:
+        this.animateTxt();
+        this.indexLetter += 1;
+        break;
     }
 
     if (this.indexLetter <= 0) {
